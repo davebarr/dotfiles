@@ -1,0 +1,19 @@
+[user]
+	name = Dave Barr
+	email = 459710+davebarr@users.noreply.github.com
+[alias]
+	b = branch
+	co = checkout
+	s = status
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	p = pull
+[core]
+	pager = cat
+	excludesfile = /Users/barr/.gitignore
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main

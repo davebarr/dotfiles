@@ -1,0 +1,4 @@
+export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
+export STAGING='gke_stellar-chariot-213418_us-central1-a_primary'
+alias kubectlp="kubectl --context $PROD"
+alias kubectls="kubectl --context $STAGING"
