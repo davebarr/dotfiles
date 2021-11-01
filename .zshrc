@@ -74,6 +74,8 @@ plugins=(git fzf k)
 
 export FZF_BASE=/opt/homebrew/opt/fzf
 
+zstyle ':omz:update' mode auto
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
