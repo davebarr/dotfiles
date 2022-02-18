@@ -2,6 +2,7 @@ export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
 export STAGING='gke_exalted-beanbag-213300_us-central1-a_primary'
 alias kp="kubectl --context $PROD"
 alias ks="kubectl --context $STAGING"
+alias k=kubectl
 function newbranch {
-   git branch $1 && git checkout -b $1
+   git branch $1 && git checkout $1
 }

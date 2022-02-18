@@ -5,6 +5,7 @@ set softtabstop=2
 set expandtab
 set ai
 set nocompatible              " be iMproved, required
+set directory=/tmp
 filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim

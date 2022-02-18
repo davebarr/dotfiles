@@ -47,7 +47,7 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
 # See https://github.com/ohmyzsh/ohmyzsh/issues/5765
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -70,17 +70,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf k)
-
-export FZF_BASE=/opt/homebrew/opt/fzf
+#
+# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+# git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+plugins=(git docker docker-compose yarn zsh-nvm zsh-autosuggestions)
 
 zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -109,13 +108,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 source <(kubectl completion zsh)
 
+source <(helm completion zsh)
 source ~/.aliases
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

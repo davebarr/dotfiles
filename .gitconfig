@@ -8,7 +8,7 @@
 	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	p = pull
 [core]
-	pager = cat
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/barr/.gitignore
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -17,3 +17,7 @@
 	required = true
 [init]
 	defaultBranch = main
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[diff-so-fancy]
+	markEmptyLines = false
