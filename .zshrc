@@ -1,8 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+case $(uname) in
+  "Darwin")
+    export NVM_DIR="${HOME}/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+    ;;
+esac
+
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/barr/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,11 +112,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+case $(uname) in
+  "Darwin")
+    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ;;
+esac
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-source <(kubectl completion zsh)
+type kubectl > /dev/null && source <(kubectl completion zsh) || true
 
-source <(helm completion zsh)
+type helm > /dev/null && source <(helm completion zsh) || true
+
 source ~/.aliases
