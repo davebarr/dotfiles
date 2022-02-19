@@ -7,6 +7,7 @@ if [ -f /etc/lsb-release ]; then
    (sudo add-apt-repository -y ppa:aos1/diff-so-fancy &&
     sudo apt -y install diff-so-fancy)
 fi
-yadm submodule update --recursive
+yadm submodule update --recursive --init
 vim -e +PluginInstall +qall
+type cmake || (sudo apt -y install cmake)
 cd ~/.vim/bundle/YouCompleteMe && ./install.py
