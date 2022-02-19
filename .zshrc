@@ -82,6 +82,9 @@ COMPLETION_WAITING_DOTS="true"
 #
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 # git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+# Don't auto nvm use
+export NVM_NO_USE=true
+
 plugins=(git docker docker-compose yarn zsh-nvm zsh-autosuggestions)
 
 zstyle ':omz:update' mode auto
