@@ -1,0 +1,15 @@
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = /home/dbarr/.vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
+[submodule ".zsh/plugins/zsh-autosuggestions"]
+	path = /home/dbarr/.zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".zsh/plugins/zsh-nvm"]
+	path = /home/dbarr/.zsh/plugins/zsh-nvm
+	url = https://github.com/lukechilds/zsh-nvm
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
