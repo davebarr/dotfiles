@@ -85,7 +85,7 @@ ZSH_CUSTOM="${HOME}/.zsh"
 # Don't auto nvm use
 export NVM_NO_USE=true
 
-plugins=(git docker docker-compose yarn zsh-nvm zsh-autosuggestions)
+plugins=(ag git docker docker-compose yarn zsh-nvm zsh-autosuggestions)
 
 zstyle ':omz:update' mode auto
 
