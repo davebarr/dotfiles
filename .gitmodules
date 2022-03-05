@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule ".zsh/themes/powerlevel10k"]
+	path = .zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
