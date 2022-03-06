@@ -58,7 +58,7 @@ DISABLE_UPDATE_PROMPT="true"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -91,8 +91,6 @@ ZSH_CUSTOM="${HOME}/.zsh"
 export NVM_NO_USE=true
 
 plugins=(ag git docker docker-compose yarn zsh-nvm zsh-autosuggestions)
-
-zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
