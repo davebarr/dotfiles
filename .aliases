@@ -1,8 +1,18 @@
+# shellcheck shell=bash
+
 export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
 export STAGING='gke_exalted-beanbag-213300_us-central1-a_primary'
-alias kp="kubectl --context $PROD"
-alias ks="kubectl --context $STAGING"
+function kp() {
+  kubectl --context "${PROD}" "$@"
+}
+function ks() {
+  kubectl --context "${STAGING}" "$@"
+}
 alias k=kubectl
 function newbranch {
-   git branch $1 && git checkout $1
+  git branch "$1" && git checkout "$1"
+}
+function update-submodules {
+  git submodule update --init --recursive &&
+    git submodule foreach git pull --recurse-submodules origin master
 }
