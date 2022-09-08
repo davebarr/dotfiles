@@ -1,5 +1,7 @@
 # shellcheck shell=bash
 
+alias b='git checkout'
+alias main='git checkout main'
 export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
 export STAGING='gke_exalted-beanbag-213300_us-central1-a_primary'
 function kp() {
@@ -10,9 +12,18 @@ function ks() {
 }
 alias k=kubectl
 function newbranch {
-  git branch "$1" && git checkout "$1"
+  git branch --no-track "$1" origin/main &&
+  git checkout "$1"
 }
 function update-submodules {
   git submodule update --init --recursive &&
     git submodule foreach git pull --recurse-submodules origin master
+}
+function gch {
+  git checkout “$(git branch | fzf| tr -d ‘[:space:]’)”
+}
+
+function unsops {
+  sops -i -d terraform.tfvars
+  find helm_vars -name "secrets.yaml" | xargs -n 1 sops -d -i
 }

@@ -132,6 +132,8 @@ type kubectl > /dev/null && source <(kubectl completion zsh) || true
 
 type helm > /dev/null && source <(helm completion zsh) || true
 
+[[ ! -f ~/.cargo/env ]] || source ~/.cargo/env
+
 source ~/.aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -7,6 +7,7 @@
 	s = status
 	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	p = pull
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/barr/.gitignore
