@@ -11,6 +11,7 @@ fi
 case $(uname) in
   "Darwin")
     export NVM_DIR="${HOME}/.nvm"
+    export HOMEBREW_NO_ENV_HINTS=1
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
     ;;
 esac
