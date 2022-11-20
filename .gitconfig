@@ -8,8 +8,8 @@
 	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	p = pull
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = /Users/barr/.gitignore
+	pager = delta
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -17,7 +17,33 @@
 	required = true
 [init]
 	defaultBranch = main
-[interactive]
-	diffFilter = diff-so-fancy --patch
-[diff-so-fancy]
-	markEmptyLines = false
+[delta]
+  dark = true
+  side-by-side = true
+  navigate = true
+  keep-plus-minus-markers = true
+  file-added-label = [+]
+  file-copied-label = [==]
+  file-modified-label = [*]
+  file-removed-label = [-]
+  file-renamed-label = [->]
+  file-style = omit
+  zero-style = syntax
+  syntax-theme = zenburn
+  commit-decoration-style = green box
+  commit-style = yellow bold italic
+  hunk-header-decoration-style = blue box ul
+  hunk-header-file-style = purple ul bold
+  hunk-header-line-number-style = yellow box bold
+  hunk-header-style = file line-number syntax bold italic
+  line-numbers = true
+  line-numbers-left-format = "{nm:>1}|"
+  line-numbers-left-style = blue
+  line-numbers-minus-style = red bold
+  line-numbers-plus-style = green bold
+  line-numbers-right-format = "{np:>1}|"
+  line-numbers-right-style = blue
+  line-numbers-zero-style = white italic
+  minus-emph-style = syntax bold red
+  plus-emph-style = syntax bold green
+  whitespace-error-style = purple bold

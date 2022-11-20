@@ -90,7 +90,7 @@ ZSH_CUSTOM="${HOME}/.zsh"
 # Don't auto nvm use
 export NVM_NO_USE=true
 
-plugins=(ag git fast-syntax-highlighting docker docker-compose yarn zsh-nvm zsh-autosuggestions)
+plugins=(ag docker docker-compose fast-syntax-highlighting git ssh-agent yarn zsh-nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
