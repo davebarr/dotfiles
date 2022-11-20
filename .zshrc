@@ -11,6 +11,7 @@ fi
 case $(uname) in
   "Darwin")
     export NVM_DIR="${HOME}/.nvm"
+    export HOMEBREW_NO_ENV_HINTS=1
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
     ;;
 esac
@@ -131,6 +132,8 @@ esac
 type kubectl > /dev/null && source <(kubectl completion zsh) || true
 
 type helm > /dev/null && source <(helm completion zsh) || true
+
+[[ ! -f ~/.cargo/env ]] || source ~/.cargo/env
 
 source ~/.aliases
 
