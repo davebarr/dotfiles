@@ -1,18 +1,12 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule ".vim/bundle/Vundle.vim"]
-	path = .vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim
 [submodule ".zsh/plugins/zsh-autosuggestions"]
 	path = .zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule ".zsh/plugins/zsh-nvm"]
 	path = .zsh/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule ".zsh/themes/powerlevel10k"]
 	path = .zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
