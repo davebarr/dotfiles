@@ -30,12 +30,10 @@
   file-renamed-label = [->]
   file-style = omit
   zero-style = syntax
-  syntax-theme = zenburn
+  syntax-theme = DarkNeon
   commit-decoration-style = green box
   commit-style = yellow bold italic
   hunk-header-decoration-style = blue box ul
-  hunk-header-file-style = purple ul bold
-  hunk-header-line-number-style = yellow box bold
   hunk-header-style = file line-number syntax bold italic
   line-numbers = true
   line-numbers-left-format = "{nm:>1}|"
@@ -45,6 +43,4 @@
   line-numbers-right-format = "{np:>1}|"
   line-numbers-right-style = blue
   line-numbers-zero-style = white italic
-  minus-emph-style = syntax bold red
-  plus-emph-style = syntax bold green
   whitespace-error-style = purple bold

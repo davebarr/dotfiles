@@ -16,7 +16,7 @@ case $(uname) in
     ;;
 esac
 
-export EDITOR=vi
+export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
