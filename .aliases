@@ -1,6 +1,7 @@
 # shellcheck shell=bash
 
 alias vi=nvim
+alias vim=nvim
 alias b='git checkout'
 alias main='git checkout main'
 export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
