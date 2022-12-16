@@ -3,6 +3,3 @@
 set -x
 
 yadm submodule update --recursive --init
-vim -e +PluginInstall +qall
-type cmake || (sudo apt -y install cmake)
-cd ~/.vim/bundle/YouCompleteMe && ./install.py
