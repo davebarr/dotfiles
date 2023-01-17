@@ -21,9 +21,6 @@ function update-submodules {
   git submodule update --init --recursive &&
     git submodule foreach git pull --recurse-submodules origin master
 }
-function gch {
-  git checkout “$(git branch | fzf| tr -d ‘[:space:]’)”
-}
 
 function unsops {
   sops -i -d terraform.tfvars
