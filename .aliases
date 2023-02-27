@@ -12,6 +12,12 @@ function kp() {
 function ks() {
   kubectl --context "${STAGING}" "$@"
 }
+function hs() {
+  helm --kube-context "${STAGING}" "$@"
+}
+function hp() {
+  helm --kube-context "${PROD}" "$@"
+}
 alias k=kubectl
 function newbranch {
   git branch --no-track "$1" origin/main &&
@@ -23,6 +29,6 @@ function update-submodules {
 }
 
 function unsops {
-  sops -i -d terraform.tfvars
+  sops -d terraform.tfvars > terraform.tfvars.json
   find helm_vars -name "secrets.yaml" | xargs -n 1 sops -d -i
 }
