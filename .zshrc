@@ -123,8 +123,8 @@ source $ZSH/oh-my-zsh.sh
 
 case $(uname) in
   "Darwin")
-    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    #source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+    #source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ;;
 esac
