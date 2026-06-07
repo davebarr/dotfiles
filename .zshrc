@@ -32,4 +32,5 @@ esac
 
 source ~/.aliases
 source ~/.key-bindings.zsh
+source ~/.theme.zsh
 
