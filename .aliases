@@ -1,34 +1,11 @@
 # shellcheck shell=bash
 
+alias aptup='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove --purge -y'
+alias ll='ls -al'
 alias vi=nvim
 alias vim=nvim
 alias b='git checkout'
-alias main='git checkout main'
-export PROD='gke_stellar-chariot-213418_us-central1-a_primary'
-export STAGING='gke_exalted-beanbag-213300_us-central1-a_primary'
-function kp() {
-  kubectl --context "${PROD}" "$@"
-}
-function ks() {
-  kubectl --context "${STAGING}" "$@"
-}
-function hs() {
-  helm --kube-context "${STAGING}" "$@"
-}
-function hp() {
-  helm --kube-context "${PROD}" "$@"
-}
-alias k=kubectl
-function newbranch {
-  git branch --no-track "$1" origin/main &&
-  git checkout "$1"
-}
 function update-submodules {
   git submodule update --init --recursive &&
     git submodule foreach git pull --recurse-submodules origin master
-}
-
-function unsops {
-  sops -d terraform.tfvars > terraform.tfvars.json
-  find helm_vars -name "secrets.yaml" | xargs -n 1 sops -d -i
 }
