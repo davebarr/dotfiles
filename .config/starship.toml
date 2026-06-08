@@ -8,5 +8,8 @@ format = """$character"""
 right_format = """$all"""
 
 ## Disable the package module, hiding it from the prompt completely
-#[package]
-#disabled = true
+[package]
+disabled = true
+
+[hostname]
+ssh_only = false
