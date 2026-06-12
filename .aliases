@@ -4,6 +4,7 @@ alias aptup='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get
 alias ll='ls -al'
 alias vi=nvim
 alias vim=nvim
+alias g=git
 alias b='git checkout'
 function update-submodules {
   git submodule update --init --recursive &&
