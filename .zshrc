@@ -14,6 +14,7 @@ setopt share_history          # share command history data
 
 export BAT_STYLE="snip"
 export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ENV_HINTS=1
 
 case $(uname) in
   "Darwin")
