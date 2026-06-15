@@ -13,7 +13,7 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt share_history          # share command history data
 
 export BAT_STYLE="snip"
-
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 case $(uname) in
   "Darwin")
