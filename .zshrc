@@ -1,5 +1,6 @@
 
 export EDITOR=nvim
+export WORDCHARS=""
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
