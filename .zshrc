@@ -34,5 +34,7 @@ esac
 
 source ~/.aliases
 source ~/.key-bindings.zsh
+autoload -Uz compinit
+compinit
 source ~/.theme.zsh
 

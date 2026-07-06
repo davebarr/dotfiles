@@ -47,8 +47,8 @@ disabled = true
 [deno]
 disabled = true
 
-[docker_context]
-disabled = true
+#[docker_context]
+#disabled = true
 
 [dotnet]
 disabled = true
