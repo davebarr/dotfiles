@@ -21,11 +21,13 @@ case $(uname) in
   "Darwin")
     eval "$(/opt/homebrew/bin/brew shellenv zsh)"
     eval "$(/opt/homebrew/bin/starship init zsh)"
+    eval "$(/opt/homebrew/bin/zsh-patina activate)"
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     ;;
   "Linux")
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
     eval "$(/home/linuxbrew/.linuxbrew/bin/starship init zsh)"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/zsh-patina activate)"
     source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     ;;
 esac
